@@ -156,7 +156,7 @@ nav {
     font-size: 62px;
   }
   .main-div img {
-    max-inline-size: 100%;
+    max-inline-size: 90%;
     block-size: auto;
   }
   .card-div {
@@ -181,7 +181,7 @@ nav {
     transform: translate(0px, 0px);
   }
   .main-div img {
-    max-inline-size: 100%;
+    max-inline-size: 90%;
     block-size: auto;
   }
   .hero-heading h1 {
@@ -198,7 +198,7 @@ nav {
     line-height: 37px;
   }
   .main-div img {
-    max-inline-size: 100%;
+    max-inline-size: 90%;
     block-size: auto;
   }
   .main-heading button {
