@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -7,8 +9,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Image from "next/image";
-import Link from "next/link";
+
+import { BsStarFill } from "react-icons/bs";
 
 type Props = {
   id: number;
@@ -16,6 +18,8 @@ type Props = {
   title: string;
   price: number;
   disPrice: number;
+  icon?: React.ComponentType[];
+  review?: number;
 };
 const slideData = [
   {
@@ -24,6 +28,8 @@ const slideData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
+    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    review: 2,
   },
   {
     id: 2,
@@ -31,6 +37,8 @@ const slideData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
+    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    review: 2,
   },
   {
     id: 3,
@@ -38,6 +46,8 @@ const slideData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
+    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    review: 2,
   },
   {
     id: 4,
@@ -45,6 +55,8 @@ const slideData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
+    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    review: 2,
   },
   {
     id: 5,
@@ -52,6 +64,8 @@ const slideData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
+    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    review: 2,
   },
   {
     id: 6,
@@ -59,6 +73,8 @@ const slideData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
+    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    review: 2,
   },
   {
     id: 7,
@@ -66,6 +82,8 @@ const slideData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
+    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    review: 2,
   },
   {
     id: 8,
@@ -73,6 +91,8 @@ const slideData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
+    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    review: 2,
   },
 ];
 const ShoulderBag = () => {
@@ -97,15 +117,12 @@ const ShoulderBag = () => {
         navigation
         scrollbar={{ draggable: true }}
         breakpoints={{
-          // Breakpoint for screens smaller than 640px
           340: {
             slidesPerView: 1,
           },
-          // Breakpoint for screens between 640px and 768px
           768: {
             slidesPerView: 2,
           },
-          // Breakpoint for screens larger than 768px
           1024: {
             slidesPerView: 3,
           },
@@ -114,7 +131,7 @@ const ShoulderBag = () => {
         {slideData.map((item: Props) => (
           <SwiperSlide key={item.id} style={{ cursor: "pointer" }}>
             <div>
-              <div style={{ position: "relative" }}>
+              <div style={{ position: "relative", overflow: "hidden" }}>
                 <Image
                   src={item.image}
                   alt="image"
@@ -152,14 +169,25 @@ const ShoulderBag = () => {
                   display: "flex",
                   flexDirection: "column",
                   gap: "5px",
-                  marginTop: "2rem",
+                  marginTop: "1rem",
                 }}
               >
                 <h2>{item.title}</h2>
                 <p>
                   ${item.price} <del>${item.disPrice}</del>
                 </p>
-                <p>review</p>
+                <p
+                  style={{ display: "flex", alignItems: "center", gap: "5px" }}
+                >
+                  {item.icon?.map((Icon, ind) => (
+                    <Icon
+                      key={ind}
+                      // @ts-ignore
+                      style={{ fill: "orange", opacity: "0.5" }}
+                    />
+                  ))}
+                  {item.review} review
+                </p>
               </div>
             </div>
           </SwiperSlide>

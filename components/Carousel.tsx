@@ -1,4 +1,7 @@
 "use client";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -7,8 +10,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Image from "next/image";
-import Link from "next/link";
 
 type Props = {
   id: number;
@@ -16,66 +17,15 @@ type Props = {
   title: string;
   price: number;
   disPrice: number;
+  icon?: React.ComponentType[];
+  review?: number;
 };
-const slideData = [
-  {
-    id: 1,
-    image: "/1.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-  {
-    id: 2,
-    image: "/2.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-  {
-    id: 3,
-    image: "/3.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-  {
-    id: 4,
-    image: "/4.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-  {
-    id: 5,
-    image: "/5.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-  {
-    id: 6,
-    image: "/6.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-  {
-    id: 7,
-    image: "/7.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-  {
-    id: 8,
-    image: "/8.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-];
-const Carousel = () => {
+type CarouselProps = {
+  data: Props[];
+  link: string;
+  title: string;
+};
+const Carousel = ({ data, title, link }: CarouselProps) => {
   return (
     <div className="carousel">
       <div
@@ -86,8 +36,8 @@ const Carousel = () => {
           marginBottom: "1rem",
         }}
       >
-        <h2>Tate Bags</h2>
-        <Link href="/">View All</Link>
+        <h2>{title}</h2>
+        <Link href={link}>View All</Link>
       </div>
 
       <Swiper
@@ -97,24 +47,22 @@ const Carousel = () => {
         navigation
         scrollbar={{ draggable: true }}
         breakpoints={{
-          // Breakpoint for screens smaller than 640px
           340: {
             slidesPerView: 1,
           },
-          // Breakpoint for screens between 640px and 768px
           768: {
             slidesPerView: 2,
           },
-          // Breakpoint for screens larger than 768px
           1024: {
             slidesPerView: 3,
           },
         }}
+        style={{ overflow: "visible" }}
       >
-        {slideData.map((item: Props) => (
+        {data?.map((item: Props) => (
           <SwiperSlide key={item.id} style={{ cursor: "pointer" }}>
             <div>
-              <div style={{ position: "relative" }}>
+              <div style={{ position: "relative", overflow: "hidden" }}>
                 <Image
                   src={item.image}
                   alt="image"
@@ -152,14 +100,25 @@ const Carousel = () => {
                   display: "flex",
                   flexDirection: "column",
                   gap: "5px",
-                  marginTop: "2rem",
+                  marginTop: "1rem",
                 }}
               >
                 <h2>{item.title}</h2>
                 <p>
                   ${item.price} <del>${item.disPrice}</del>
                 </p>
-                <p>review</p>
+                <p
+                  style={{ display: "flex", alignItems: "center", gap: "5px" }}
+                >
+                  {item.icon?.map((Icon, ind) => (
+                    <Icon
+                      key={ind}
+                      // @ts-ignore
+                      style={{ fill: "orange", opacity: "0.5" }}
+                    />
+                  ))}
+                  {item.review} review
+                </p>
               </div>
             </div>
           </SwiperSlide>

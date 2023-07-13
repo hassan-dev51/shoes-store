@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Main from "./Main";
 import BgImage from "@/components/BgImage";
 import ShoulderBag from "@/components/ShoulderBag";
+import { LeatherBagData, ShoulderBagData, TateBagData } from "./shoes";
 
 export default function Home() {
   return (
@@ -10,9 +11,23 @@ export default function Home() {
       <Main />
       {/* @ts-expect-error Server Component */}
       <Hero />
-      <Carousel />
+      <Carousel
+        data={TateBagData}
+        title="Tate Bags"
+        link="https://github.com"
+      />
+      <Carousel
+        data={ShoulderBagData}
+        title="Shoulder Bag"
+        link="https://facebook.com"
+      />
       <BgImage />
-      <ShoulderBag />
+      <Carousel
+        data={LeatherBagData}
+        title="Leather Bag"
+        link="https://google.com"
+      />
+      {/* <ShoulderBag /> */}
     </div>
   );
 }
