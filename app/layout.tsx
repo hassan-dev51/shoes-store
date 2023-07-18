@@ -1,8 +1,8 @@
 import Navbar from "./Navbar";
 import "./globals.css";
-import { Roboto } from "next/font/google";
+import { Nunito } from "next/font/google";
 
-const roboto = Roboto({
+const roboto = Nunito({
   weight: "400",
   subsets: ["latin"],
 });
