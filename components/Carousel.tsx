@@ -10,6 +10,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { BsStarFill } from "react-icons/bs";
+import { IconType } from "react-icons/lib";
 
 type Props = {
   id: number;
@@ -17,13 +19,17 @@ type Props = {
   title: string;
   price: number;
   disPrice: number;
-  icon?: React.ComponentType[];
+  icon?: string[];
   review?: number;
 };
 type CarouselProps = {
   data: Props[];
   link: string;
   title: string;
+};
+
+const iconComponent: { [key: string]: IconType } = {
+  BsStarFill,
 };
 const Carousel = ({ data, title, link }: CarouselProps) => {
   return (
@@ -110,13 +116,18 @@ const Carousel = ({ data, title, link }: CarouselProps) => {
                 <p
                   style={{ display: "flex", alignItems: "center", gap: "5px" }}
                 >
-                  {item.icon?.map((Icon, ind) => (
-                    <Icon
-                      key={ind}
-                      // @ts-ignore
-                      style={{ fill: "orange", opacity: "0.5" }}
-                    />
-                  ))}
+                  {item.icon?.map((iconName: string, ind: number) => {
+                    const IconObj = iconComponent[iconName];
+                    if (!IconObj) {
+                      return null;
+                    }
+                    return (
+                      <IconObj
+                        key={ind}
+                        style={{ fill: "orange", opacity: "0.5" }}
+                      />
+                    );
+                  })}
                   {item.review} review
                 </p>
               </div>

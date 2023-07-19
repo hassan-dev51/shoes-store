@@ -1,5 +1,3 @@
-import { BsStarFill } from "react-icons/bs";
-
 export type Shoes = {
   id: number;
   name: string;
@@ -47,7 +45,7 @@ export const TateBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
   {
@@ -70,7 +68,7 @@ export const TateBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill"],
     review: 3,
   },
   {
@@ -93,7 +91,7 @@ export const TateBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill"],
     review: 3,
   },
   {
@@ -111,7 +109,7 @@ export const ShoulderBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
   {
@@ -120,7 +118,7 @@ export const ShoulderBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
   {
@@ -129,7 +127,7 @@ export const ShoulderBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
   {
@@ -138,7 +136,7 @@ export const ShoulderBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
   {
@@ -147,7 +145,7 @@ export const ShoulderBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
   {
@@ -156,7 +154,7 @@ export const ShoulderBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
   {
@@ -165,7 +163,7 @@ export const ShoulderBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
   {
@@ -174,7 +172,7 @@ export const ShoulderBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
+    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
 ];
@@ -185,7 +183,6 @@ export const LeatherBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
     review: 2,
   },
   {
@@ -194,7 +191,6 @@ export const LeatherBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
     review: 2,
   },
   {
@@ -203,7 +199,6 @@ export const LeatherBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
     review: 2,
   },
   {
@@ -212,7 +207,6 @@ export const LeatherBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
     review: 2,
   },
   {
@@ -221,7 +215,6 @@ export const LeatherBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
     review: 2,
   },
   {
@@ -230,7 +223,6 @@ export const LeatherBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
     review: 2,
   },
   {
@@ -239,7 +231,6 @@ export const LeatherBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
     review: 2,
   },
   {
@@ -248,7 +239,6 @@ export const LeatherBagData = [
     title: "City - All Black",
     price: 89,
     disPrice: 99,
-    // icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
     review: 2,
   },
 ];
