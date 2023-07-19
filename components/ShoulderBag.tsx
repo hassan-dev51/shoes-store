@@ -10,62 +10,55 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import { BsStarFill } from "react-icons/bs";
-
 type Props = {
   id: number;
   image: string;
   title: string;
-  price: number;
-  disPrice: number;
-  icon?: React.ComponentType[];
-  review?: number;
+  quantity: number;
+  link: string;
 };
 const slideData = [
   {
     id: 1,
     image: "/city.jpg",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
-    review: 2,
+    title: "City",
+    quantity: 4,
+    link: "http://google.com",
   },
   {
     id: 2,
-    image: "/city.jpg",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
-    review: 2,
+    image: "/charlottel.jpg",
+    title: "Charlottel",
+    quantity: 4,
+    link: "http://google.com",
   },
   {
     id: 3,
-    image: "/city.jpg",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
-    review: 2,
+    image: "/clearance.jpg",
+    title: "Clearance",
+    quantity: 4,
+    link: "http://google.com",
   },
   {
     id: 4,
-    image: "/city.jpg",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
-    review: 2,
+    image: "/composition.jpg",
+    title: "Composition",
+    quantity: 4,
+    link: "http://google.com",
   },
   {
     id: 5,
-    image: "/city.jpg",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
-    review: 2,
+    image: "/leather.jpg",
+    title: "Leather",
+    quantity: 4,
+    link: "http://google.com",
+  },
+  {
+    id: 6,
+    image: "/straps.jpg",
+    title: "Starps",
+    quantity: 4,
+    link: "http://google.com",
   },
 ];
 const ShoulderBag = () => {
@@ -76,11 +69,17 @@ const ShoulderBag = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          marginBottom: "1rem",
+          marginBottom: "2rem",
         }}
       >
-        <h2>Shoulder Bags</h2>
-        <Link href="/">View All</Link>
+        <h2
+          style={{ fontSize: "27px", color: "#423F3F", fontWeight: "lighter" }}
+        >
+          Collections list
+        </h2>
+        <Link href="/" style={{ fontSize: "16px", color: "5E5C5C" }}>
+          View All
+        </Link>
       </div>
 
       <Swiper
@@ -100,21 +99,30 @@ const ShoulderBag = () => {
             slidesPerView: 3,
           },
         }}
+        style={{ overflow: "visible" }}
       >
         {slideData.map((item: Props) => (
           <SwiperSlide key={item.id} style={{ cursor: "pointer" }}>
             <div>
-              <div style={{ position: "relative", overflow: "hidden" }}>
+              <div className="slide-image">
                 <Image
                   src={item.image}
                   alt="image"
                   height={400}
-                  width={400}
+                  width={420}
                   style={{
                     maxInlineSize: "100%",
                     display: "block",
                   }}
                 />
+
+                <div className="collection-image-overlay">
+                  <h3>{item.title}</h3>
+                  <div className="button-container">
+                    <Link href={item.link}>{item.quantity} Products</Link>
+                    <button className="btn">Button</button>
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
