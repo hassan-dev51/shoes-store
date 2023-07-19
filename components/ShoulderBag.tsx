@@ -24,7 +24,7 @@ type Props = {
 const slideData = [
   {
     id: 1,
-    image: "/1.webp",
+    image: "/city.jpg",
     title: "City - All Black",
     price: 89,
     disPrice: 99,
@@ -33,7 +33,7 @@ const slideData = [
   },
   {
     id: 2,
-    image: "/2.webp",
+    image: "/city.jpg",
     title: "City - All Black",
     price: 89,
     disPrice: 99,
@@ -42,7 +42,7 @@ const slideData = [
   },
   {
     id: 3,
-    image: "/3.webp",
+    image: "/city.jpg",
     title: "City - All Black",
     price: 89,
     disPrice: 99,
@@ -51,7 +51,7 @@ const slideData = [
   },
   {
     id: 4,
-    image: "/4.webp",
+    image: "/city.jpg",
     title: "City - All Black",
     price: 89,
     disPrice: 99,
@@ -60,34 +60,7 @@ const slideData = [
   },
   {
     id: 5,
-    image: "/5.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
-    review: 2,
-  },
-  {
-    id: 6,
-    image: "/6.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
-    review: 2,
-  },
-  {
-    id: 7,
-    image: "/7.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: [BsStarFill, BsStarFill, BsStarFill, BsStarFill],
-    review: 2,
-  },
-  {
-    id: 8,
-    image: "/8.webp",
+    image: "/city.jpg",
     title: "City - All Black",
     price: 89,
     disPrice: 99,
@@ -136,58 +109,12 @@ const ShoulderBag = () => {
                   src={item.image}
                   alt="image"
                   height={400}
-                  width={405}
+                  width={400}
                   style={{
                     maxInlineSize: "100%",
                     display: "block",
                   }}
                 />
-
-                <span
-                  style={{
-                    position: "absolute",
-                    left: "30px",
-                    top: "30px",
-                    backgroundColor: "rgba(255,0,0,0.5)",
-                    padding: "10px",
-                    color: "white",
-                  }}
-                >
-                  Sale 70%
-                </span>
-                <Image
-                  src="/5.webp"
-                  alt="image"
-                  height={400}
-                  width={405}
-                  className="image-overlay"
-                />
-              </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "5px",
-                  marginTop: "1rem",
-                }}
-              >
-                <h2>{item.title}</h2>
-                <p>
-                  ${item.price} <del>${item.disPrice}</del>
-                </p>
-                <p
-                  style={{ display: "flex", alignItems: "center", gap: "5px" }}
-                >
-                  {item.icon?.map((Icon, ind) => (
-                    <Icon
-                      key={ind}
-                      // @ts-ignore
-                      style={{ fill: "orange", opacity: "0.5" }}
-                    />
-                  ))}
-                  {item.review} review
-                </p>
               </div>
             </div>
           </SwiperSlide>

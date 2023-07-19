@@ -27,7 +27,7 @@ export default function Home() {
         title="Leather Bag"
         link="https://google.com"
       />
-      {/* <ShoulderBag /> */}
+      <ShoulderBag />
     </div>
   );
 }

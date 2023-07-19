@@ -78,29 +78,6 @@ export const TateBagData = [
     price: 89,
     disPrice: 99,
   },
-  {
-    id: 6,
-    image: "/6.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
-  {
-    id: 7,
-    image: "/7.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: ["BsStarFill", "BsStarFill"],
-    review: 3,
-  },
-  {
-    id: 8,
-    image: "/8.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-  },
 ];
 export const ShoulderBagData = [
   {
@@ -148,33 +125,6 @@ export const ShoulderBagData = [
     icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
     review: 2,
   },
-  {
-    id: 6,
-    image: "/6.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
-    review: 2,
-  },
-  {
-    id: 7,
-    image: "/7.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
-    review: 2,
-  },
-  {
-    id: 8,
-    image: "/8.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    icon: ["BsStarFill", "BsStarFill", "BsStarFill", "BsStarFill"],
-    review: 2,
-  },
 ];
 export const LeatherBagData = [
   {
@@ -212,30 +162,6 @@ export const LeatherBagData = [
   {
     id: 5,
     image: "/5.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    review: 2,
-  },
-  {
-    id: 6,
-    image: "/6.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    review: 2,
-  },
-  {
-    id: 7,
-    image: "/7.webp",
-    title: "City - All Black",
-    price: 89,
-    disPrice: 99,
-    review: 2,
-  },
-  {
-    id: 8,
-    image: "/8.webp",
     title: "City - All Black",
     price: 89,
     disPrice: 99,

@@ -75,7 +75,7 @@ const Carousel = ({ data, title, link }: CarouselProps) => {
                   height={400}
                   width={405}
                   style={{
-                    maxInlineSize: "100%",
+                    maxInlineSize: "130%",
                     display: "block",
                   }}
                 />
@@ -105,13 +105,17 @@ const Carousel = ({ data, title, link }: CarouselProps) => {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "5px",
+                  gap: "4px",
                   marginTop: "1rem",
+                  color: "#5e5c5c",
                 }}
               >
-                <h2>{item.title}</h2>
-                <p>
-                  ${item.price} <del>${item.disPrice}</del>
+                <h2 style={{ fontSize: "15px", fontWeight: "normal" }}>
+                  {item.title}
+                </h2>
+                <p style={{ display: "flex", gap: "1rem", fontSize: "13px" }}>
+                  ${item.price}
+                  <del>${item.disPrice}</del>
                 </p>
                 <p
                   style={{ display: "flex", alignItems: "center", gap: "5px" }}
