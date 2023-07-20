@@ -67,13 +67,13 @@ const Carousel = ({ data, title, link }: CarouselProps) => {
       >
         {data?.map((item: Props) => (
           <SwiperSlide key={item.id} style={{ cursor: "pointer" }}>
-            <div>
+            <div className="shadow">
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <Image
                   src={item.image}
                   alt="image"
                   height={400}
-                  width={405}
+                  width={415}
                   style={{
                     maxInlineSize: "130%",
                     display: "block",
@@ -107,14 +107,16 @@ const Carousel = ({ data, title, link }: CarouselProps) => {
                   flexDirection: "column",
                   gap: "4px",
                   marginTop: "1rem",
+                  marginLeft: "1rem",
+                  paddingBottom: "10px",
                   color: "#5e5c5c",
                 }}
               >
                 <h2 style={{ fontSize: "15px", fontWeight: "normal" }}>
                   {item.title}
                 </h2>
-                <p style={{ display: "flex", gap: "1rem", fontSize: "13px" }}>
-                  ${item.price}
+                <p style={{ display: "flex", gap: "1.2rem", fontSize: "13px" }}>
+                  <span style={{ color: "#A70000" }}>${item.price}</span>
                   <del>${item.disPrice}</del>
                 </p>
                 <p
