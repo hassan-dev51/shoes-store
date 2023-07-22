@@ -170,6 +170,8 @@ nav {
   flex-direction: column;
   gap: 2rem;
 }
+/* .carousel code start from here ...
+ */
 .carousel {
   background-color: #f4f4f4;
   overflow: hidden;
@@ -177,7 +179,7 @@ nav {
 }
 .shadow {
   background-color: #f4f4f4;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(17, 12, 46, 0.048) 0px 48px 100px 0px;
 }
 .swiper {
   padding-bottom: 80px !important;
@@ -310,7 +312,7 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 40px;
-  color: white;
+  color: rgba(252, 246, 246, 0.904);
   letter-spacing: 2px;
   transition: all 0.3s linear;
 }

@@ -120,7 +120,7 @@ const Carousel = ({ data, title, link }: CarouselProps) => {
                   <del>${item.disPrice}</del>
                 </p>
                 <p
-                  style={{ display: "flex", alignItems: "center", gap: "5px" }}
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
                 >
                   {item.icon?.map((iconName: string, ind: number) => {
                     const IconObj = iconComponent[iconName];
@@ -130,7 +130,7 @@ const Carousel = ({ data, title, link }: CarouselProps) => {
                     return (
                       <IconObj
                         key={ind}
-                        style={{ fill: "orange", opacity: "0.5" }}
+                        style={{ fill: "#A70000", opacity: "0.5" }}
                       />
                     );
                   })}

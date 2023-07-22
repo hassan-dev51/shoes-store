@@ -84,7 +84,7 @@ const ShoulderBag = () => {
 
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={20}
+        spaceBetween={10}
         slidesPerView={3}
         navigation
         scrollbar={{ draggable: true }}
@@ -108,8 +108,8 @@ const ShoulderBag = () => {
                 <Image
                   src={item.image}
                   alt="image"
-                  height={400}
-                  width={420}
+                  height={420}
+                  width={430}
                   style={{
                     maxInlineSize: "100%",
                     display: "block",
