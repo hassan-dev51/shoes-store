@@ -104,3 +104,24 @@ const Carousel = ({ data, link, title }: CarouselArray) => {
 };
 
 export default Carousel;
+
+// const BigImage = () => {
+//     return (
+//       <div
+//         className="flex justify-center items-center h-screen w-full bg-cover max-w-full max-h-full bg-gradient-radial bg-center"
+//         style={{ backgroundImage: "url('/bigImage/bigImage.jpg')" }}
+//       >
+//         <div className="flex justify-center items-center flex-col gap-10 text-gray-100 tracking-[2px] transition-all text-center">
+//           <h1 className="md:text-5xl text-[32px]">Ethically Manufactured</h1>
+//           <h2 className="md:text-2xl text-[14px]">
+//             Suitable for vegans BPA free
+//           </h2>
+//           <button className="outline-none border-none px-6 py-4 tracking-[2px] text-[16px] text-gray-900 rounded-lg bg-[#e5e5e5]">
+//             Shop Now
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   };
+
+//   export default BigImage;
